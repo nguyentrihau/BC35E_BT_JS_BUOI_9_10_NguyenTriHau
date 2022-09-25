@@ -52,7 +52,7 @@ function layThongTinNhanVien(isAdd){
     isValid &= validation.kiemTraRong(luongCoBan,"tbLuongCB","(*)Vui lòng nhập lương cơ bản") && validation.kiemTraGioiHang(luongCoBan,"tbLuongCB","(*)lương cơ bản nhập từ 1000000 -20000000",1000000,20000000);
 
     //chucVu
-    isValid &= validation.kiemTraRong(chucVu,"tbChucVu","(*)Vui lòng chọn chức vụ") && validation.kiemTraChucVu("chucvu","tbChucVu","(*)Vui lòng chọn chức vụ");
+    isValid &= validation.kiemTraChucVu("chucvu","tbChucVu","(*)Vui lòng chọn chức vụ");
 
     //gioLam
     isValid &= validation.kiemTraRong(gioLam,"tbGiolam","(*)Vui lòng nhập giờ làm") && validation.kiemTraGioiHang(gioLam,"tbGiolam","(*)giờ làm nhập từ 80 - 200",80,200);
