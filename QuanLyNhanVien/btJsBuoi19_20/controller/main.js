@@ -49,13 +49,13 @@ function layThongTinNhanVien(isAdd){
     isValid &= validation.kiemTraRong(ngayLam,"tbNgay","(*)Vui lòng nhập ngày làm") && validation.kiemTraNgayLam(ngayLam,"tbNgay","(*)Vui lòng nhập đúng định dạng(dd/mm/yyyy)")
 
     //luongCoBan
-    isValid &= validation.kiemTraRong(luongCoBan,"tbLuongCB","(*)Vui lòng nhập lương cơ bản") && validation.kiemTraGioiHang(luongCoBan,"tbLuongCB","(*)lương cơ bản nhập từ 1000000 -20000000",1000000,20000000);
+    isValid &= validation.kiemTraRong(luongCoBan,"tbLuongCB","(*)Vui lòng nhập lương cơ bản") && validation.kiemTraSo(luongCoBan,"tbLuongCB","(*)Chỉ nhập được số") && validation.kiemTraGioiHang(luongCoBan,"tbLuongCB","(*)lương cơ bản nhập từ 1000000 -20000000",1000000,20000000);
 
     //chucVu
     isValid &= validation.kiemTraChucVu("chucvu","tbChucVu","(*)Vui lòng chọn chức vụ");
 
     //gioLam
-    isValid &= validation.kiemTraRong(gioLam,"tbGiolam","(*)Vui lòng nhập giờ làm") && validation.kiemTraGioiHang(gioLam,"tbGiolam","(*)giờ làm nhập từ 80 - 200",80,200);
+    isValid &= validation.kiemTraRong(gioLam,"tbGiolam","(*)Vui lòng nhập giờ làm") && validation.kiemTraSo(gioLam,"tbGiolam","(*)chỉ được nhập số") && validation.kiemTraGioiHang(gioLam,"tbGiolam","(*)giờ làm nhập từ 80 - 200",80,200) ;
     
     
 

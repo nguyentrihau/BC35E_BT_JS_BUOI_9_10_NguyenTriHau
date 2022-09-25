@@ -125,4 +125,15 @@ function Validation() {
             domID(iderror).style.display = "block";
             return false;
     };
+    this.kiemTraSo = function(value,iderror,mess){
+        var interger=/^[0-9]+$/;
+        if(value.match(interger)){
+            domID(iderror).innerHTML = "";
+            domID(iderror).style.display = "none";
+            return true;
+        };
+        domID(iderror).innerHTML = mess;
+        domID(iderror).style.display = "block";
+        return false;
+    };
 };
